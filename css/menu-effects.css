@@ -1,3 +1,19 @@
+/*
+ * Menu Effects: A collection of CSS3 menu effects (degrades gracefully in IE8).
+ *
+ * Don't hesitate to create new effects and remove the ones you don't need.
+ *
+ * latest version and complete README available on Github:
+ * https://github.com/louisremi/menu-effects
+ *
+ * Copyright 2012 @louis_remi
+ * Licensed under the MIT license.
+ *
+ * Are you using this in a paid work?
+ * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
+ *
+ */
+
 .menu, .menu ul {
   list-style: none;
   padding: 0;
@@ -21,10 +37,10 @@
   overflow: hidden;
   max-height: 0;
   /* The transition-delay prevents the menu to disappear before the transition is run backward
-   * It's ~= length of the animation (.6s) + highest item transition delay (466ms)
-   */
+   * It's ~= length of the animation (.6s) + highest item transition delay (466ms) */
   -webkit-transition: max-height 1ms linear 1s;
      -moz-transition: max-height 1ms linear 1s;
+  /* A .submenu should be only revealed when hovering the .menu */
   pointer-events: none;
 }
 
@@ -36,10 +52,13 @@
      -moz-transition: none;
 }
 
-/* Make animations progressive 
+/* Progressive Anim
+ * ==================================================================
  * This is a lot of redundant code but the result is worth it
- * This should be edited for menus with more or less than 8 items 
+ * This should be edited for menus with more or much less than 8 items 
  */
+
+ /* forward */
 .menu > li:hover .submenu li:nth-child(1) {
   -webkit-transition-delay: 0s;
      -moz-transition-delay: 0s;
@@ -104,6 +123,7 @@
           transition-delay: 466ms;
 }
 
+/* backward */
 .submenu li:nth-child(1) {
   -webkit-transition-delay: 466ms;
      -moz-transition-delay: 466ms;
