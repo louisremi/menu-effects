@@ -35,6 +35,8 @@
   top: 100%;
   z-index: 0;
   overflow: hidden;
+  /* IE8 needs this */
+  overflow: hidden\0/ !important;
   max-height: 0;
   /* A .submenu should be only revealed when hovering the .menu */
   pointer-events: none;
