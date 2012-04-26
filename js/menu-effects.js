@@ -92,6 +92,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
 // c, an expressive className manipulation library
 // (because classList still appear to be unavailable in IE10)
-function c(e,v,n,c,r){r=e[c='className'].replace(RegExp('/ *\\b'+n+'\\b/g'),'');return'has'==v?r!=e[c]:e[c]={add:1,toggle:r==e[c]}[v]?r+' '+n:r};
+function c(e,v,n,c,r){r=e[c='className'].replace(RegExp(' *\\b'+n+'\\b','g'),'');return'has'==v?r!=e[c]:e[c]={add:1,toggle:r==e[c]}[v]?r+' '+n:r};
 
 })(document);
